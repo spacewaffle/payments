@@ -4,5 +4,9 @@ class Subscription < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :coupon
+  belongs_to :plan
 
+  attr_accessible :cards, :stripe_id, :plan_id, :last_four, :coupon_id, 
+                  :card_type, :current_price
+                  
 end
