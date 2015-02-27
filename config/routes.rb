@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
+  
+  # Added by Koudoku.
+  mount Koudoku::Engine, at: 'koudoku'
+  scope module: 'koudoku' do
+    get 'pricing' => 'subscriptions#index', as: 'pricing'
+  end
+
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  devise_scope :user do
+    root 'devise/registrations#new'
+
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

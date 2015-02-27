@@ -18,6 +18,9 @@ gem 'koudoku', :git => 'https://github.com/andrewculver/koudoku.git'
 
 gem 'devise'
 
+#to work with koudoku since it uses rails 3 attr_accessible
+gem 'protected_attributes'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
