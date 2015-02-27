@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
 
+#to work with koudoku since it uses rails 3 attr_accessible
+gem 'protected_attributes'
+gem 'koudoku', :git => 'https://github.com/andrewculver/koudoku.git'
+
+gem 'devise'
+
+gem 'bootstrap-sass', '~> 3.3.3'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
@@ -13,13 +22,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
-gem 'koudoku', :git => 'https://github.com/andrewculver/koudoku.git'
-
-gem 'devise'
-
-#to work with koudoku since it uses rails 3 attr_accessible
-gem 'protected_attributes'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
